@@ -175,7 +175,7 @@ class WebPageTest(object):
         ok = False
         while not ok:
             try:
-                response = session.get('http://169.254.169.254/latest/user-data',
+                response = session.get('http://172.31.39.23/latest/user-data',
                                        timeout=30, proxies=proxies)
                 if len(response.text):
                     self.parse_user_data(response.text)
